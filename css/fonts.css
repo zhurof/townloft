@@ -1,0 +1,142 @@
+﻿@font-face {
+	font-family: 'Proxima Nova';
+	src: local('Proxima Nova Thin'), local('ProximaNovaT-Thin'),
+			url('../fonts/proxima/ProximaNovaT-Thin.woff2') format('woff2'),
+			url('../fonts/proxima/ProximaNovaT-Thin.woff') format('woff'),
+			url('../fonts/proxima/ProximaNovaT-Thin.svg#ProximaNovaT-Thin') format('svg');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Proxima Nova';
+	src: local('Proxima Nova Light'), local('ProximaNova-Light'),
+			url('../fonts/proxima/ProximaNova-Light.woff2') format('woff2'),
+			url('../fonts/proxima/ProximaNova-Light.woff') format('woff'),
+			url('../fonts/proxima/ProximaNova-Light.svg#ProximaNova-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Proxima Nova';
+	src: local('Proxima Nova Regular'), local('ProximaNova-Regular'),
+			url('../fonts/proxima/ProximaNova-Regular.woff2') format('woff2'),
+			url('../fonts/proxima/ProximaNova-Regular.woff') format('woff'),
+			url('../fonts/proxima/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Proxima Nova';
+	src: local('Proxima Nova Semibold'), local('ProximaNova-Semibold'),
+			url('../fonts/proxima/ProximaNova-Semibold.woff2') format('woff2'),
+			url('../fonts/proxima/ProximaNova-Semibold.woff') format('woff'),
+			url('../fonts/proxima/ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Proxima Nova';
+	src: local('Proxima Nova Bold'), local('ProximaNova-Bold'),
+			url('../fonts/proxima/ProximaNova-Bold.woff2') format('woff2'),
+			url('../fonts/proxima/ProximaNova-Bold.woff') format('woff'),
+			url('../fonts/proxima/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Proxima Nova';
+	src: local('Proxima Nova Extrabold'), local('ProximaNova-Extrabld'),
+			url('../fonts/proxima/ProximaNova-Extrabld.woff2') format('woff2'),
+			url('../fonts/proxima/ProximaNova-Extrabld.woff') format('woff'),
+			url('../fonts/proxima/ProximaNova-Extrabld.svg#ProximaNova-Extrabld') format('svg');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Proxima Nova';
+	src: local('Proxima Nova Black'), local('ProximaNova-Black'),
+			url('../fonts/proxima/ProximaNova-Black.woff2') format('woff2'),
+			url('../fonts/proxima/ProximaNova-Black.woff') format('woff'),
+			url('../fonts/proxima/ProximaNova-Black.svg#ProximaNova-Black') format('svg');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'PT Serif';
+	src: local('PT Serif'), local('PTSerif-Regular'),
+			url('../fonts/pt-serif/PTSerif-Regular.woff2') format('woff2'),
+			url('../fonts/pt-serif/PTSerif-Regular.woff') format('woff'),
+			url('../fonts/pt-serif/PTSerif-Regular.svg#PTSerif-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'PT Serif';
+	src: local('PT Serif Bold'), local('PTSerif-Bold'),
+			url('../fonts/pt-serif/PTSerif-Bold.woff2') format('woff2'),
+			url('../fonts/pt-serif/PTSerif-Bold.woff') format('woff'),
+			url('../fonts/pt-serif/PTSerif-Bold.svg#PTSerif-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon/icomoon.eot?ull9dt');
+  src:  url('../fonts/icomoon/icomoon.eot?ull9dt#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?ull9dt') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?ull9dt') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?ull9dt#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-close:before {
+  content: "\e900";
+}
+.icon-chat:before {
+  content: "\e901";
+}
+.icon-chat-o:before {
+  content: "\e902";
+}
+.icon-clock:before {
+  content: "\e903";
+}
+.icon-envelope:before {
+  content: "\e904";
+}
+.icon-eye:before {
+  content: "\e905";
+}
+.icon-map-marker:before {
+  content: "\e906";
+}
+.icon-phone:before {
+  content: "\e907";
+}
+.icon-viber:before {
+  content: "\e908";
+}

@@ -1,0 +1,204 @@
+@charset "UTF-8";
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, :before, :after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  font: normal normal 14px/normal "Proxima Nova", sans-serif;
+  color: #1b1b1b;
+}
+
+header, footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+img,
+iframe,
+video {
+  max-width: 100%;
+}
+
+a img {
+  /*для IE10 */
+  border: none;
+}
+
+p {
+  margin: 0 0 1em;
+}
+p:last-child {
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+*:invalid {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/*элементы форм */
+input, textarea, button, select {
+  font: inherit;
+  color: inherit;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+/*кнопки */
+button,
+[type=submit],
+[type=reset],
+[type=image] {
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  min-width: 190px;
+  padding: 0 25px;
+  text-align: center;
+  font: normal bold 16px/57px "Proxima Nova", sans-serif;
+  text-shadow: none;
+  background-color: #a3d252;
+  color: #fff;
+  white-space: nowrap;
+  min-width: 190px;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+  text-decoration: none;
+}
+.btn_block {
+  padding: 0 10px;
+  display: block;
+  width: 100%;
+}
+
+/*заголовки */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1em;
+  font-family: "PT Serif", sans-serif;
+  font-weight: bold;
+  line-height: normal;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+/*списки */
+ul, ol {
+  margin: 0 0 1em;
+}
+
+/*таблицы */
+/*контейнеры */
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*ШАПКА */
+.header {
+  padding: 18px 0;
+}
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__logo {
+  display: inline-block;
+  width: 152px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin: 0 10px 0 0;
+}
+.header__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+}
+.header__menu > li {
+  display: inline-block;
+}
+.header__menu > li > a {
+  display: block;
+}
+
+.chat-block__body {
+  display: none;
+}
+
+.phone-block {
+  position: relative;
+}
+.phone-block__body {
+  display: none;
+}
+
+/*ОСНОВНОЕ СОДЕРЖИМОЕ */
+/*ПОДВАЛ */
+/*АДАПТИВ */
+@media(max-width:1199px) {
+  .wrapper {
+    max-width: 992px;
+  }
+}
