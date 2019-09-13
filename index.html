@@ -1,0 +1,600 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Верстка</title>
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no" />	
+	<link rel="stylesheet" href="css/fonts.css" />	
+	<link rel="stylesheet" href="css/font-awesome.css" />
+	<link rel="stylesheet" href="libs/slick/slick.css" />
+	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<header class="header">
+		<div class="wrapper header__wrapper">
+			<img src="img/logo.svg" alt="" class="header__logo" />
+			<ul class="header__menu">				
+				<li><a href="#catalog">Каталог</a></li>
+				<li><a href="#advantages">преимущества</a></li>
+				<li><a href="#about">о нас</a></li>
+				<li><a href="#portfolio">портфолио</a></li>
+				<li><a href="#calc">калькулятор</a></li>
+				<li><a href="#contacts">контакты</a></li>
+			</ul>
+			<div class="chat-block header__chat">
+				<div class="chat-block__trigger"></div>
+				<div class="chat-block__body">
+					<h3 class="chat-block__subtitle">Выберите удобный способ связи</h3>
+					<div class="chat-block__links">
+						<a href="#" class="circle-link">
+							<i class="circle-link__icon fa-paper-plane"></i>
+							<span class="circle-link__caption">Telegram</span>
+						</a>						
+						<a href="#" class="circle-link">
+							<i class="circle-link__icon fa-whatsapp"></i>
+							<span class="circle-link__caption">Whatsapp</span>
+						</a>
+						<a href="#" class="circle-link">
+							<i class="circle-link__icon icon-viber"></i>
+							<span class="circle-link__caption">Viber</span>
+						</a>
+					</div>
+					<h3 class="chat-block__subtitle">Или закажите обратный звонок</h3>
+					<form action="asd.as">
+						<label class="field">							
+							<input type="tel" name="phone" class="field__input field__input--gray" />
+							<span class="field__placeholder">Телефон</span>
+						</label>
+						<button class="btn btn--block">Заказать звонок</button>
+					</form>
+				</div>
+			</div>
+			<div class="phone-block header__phone">
+				<div class="phone-block__head">+375 (29) 922-99-77</div>
+				<div class="phone-block__body">
+					<div class="phone-block__item">
+						<h3 class="phone-block__subtitle">Магазин 1</h3>
+						<a href="tel:+375299229977" class="phone-block__phone">+375 (29) 922-99-77</a>
+						<div class="phone-block__address">МФК Ленинград, ул. Ленина 27 Время работы: 8 - 20</div>
+					</div>
+					<div class="phone-block__item">
+						<h3 class="phone-block__subtitle">Магазин 2</h3>
+						<a href="tel:+375336350128" class="phone-block__phone">+375 (33) 635-01-28</a>
+						<div class="phone-block__address">ТЦ Трюм, ул. Кальварийская 7б Время работы: 8 - 20</div>
+					</div>
+				</div>
+			</div>
+			<span class="menu-btn"></span>
+		</div>
+	</header>
+<!-- Переход на страницу со ссылками на современные браузеры для ie9 и ниже -->
+<!--[if lt IE 10]><script>location.href='/old-ie.html';</script><![endif]-->
+	<main>
+		<div class="top-block">			
+			<div class="wrapper top-block__wrapper">
+				<div class="top-block__text">
+					<p>От идеи до воплощения</p>
+					<h1 class="top-block__title"><span>Мебель и предметы интерьера <br>в стиле лофт по индивидуальным проектам</span></h1>
+					<a href="#" class="btn btn--low top-block__btn" data-modal="consult">Консультация</a>
+					<div class="top-block__social">
+						<a href="//fb.com" class="fa-facebook" target="_blank"></a>
+						<a href="//vk.com" class="fa-vk" target="_blank"></a>
+						<a href="//instagram.com" class="fa-instagram" target="_blank"></a>
+					</div>
+				</div>
+				<div class="top-block__pic">
+					<div class="address-block top-block__address">
+						<h3 class="address-block__title">Где мы находимся</h3>
+						<p><strong>Минск</strong> ТЦ Трюм, ул. Кальварийская 7б МФК Ленинград, ул. Ленина 27</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section catalog" id="catalog">
+			<div class="wrapper">
+				<div class="section__inner">
+					<div class="section__caption">Каталог</div>
+					<div class="section__header">
+						<div class="section__head">
+							<h2 class="section__title">Что мы <em>изготавливаем</em></h2>
+							<p>Мебель и предметы интерьера под заказ</p>
+						</div>
+						<div class="section__tools">							
+							<a href="#" class="btn btn--low" data-modal="order">Сделать заказ</a>
+						</div>
+					</div>
+					<div class="section__content catalog__inner">
+						<div class="catalog__item">
+							<div class="catalog__slider">
+								<div class="catalog__slide">
+									<img src="img/catalog/0.jpg" alt="">
+								</div>
+								<div class="catalog__slide">
+									<img src="img/catalog/0.jpg" alt="">
+								</div>
+							</div>
+							<a href="#" class="catalog__btn" data-modal="order"><span>Столы</span></a>
+						</div>
+						<div class="catalog__item">
+							<div class="catalog__slider">
+								<div class="catalog__slide">
+									<img src="img/catalog/1.jpg" alt="">
+								</div>
+								<div class="catalog__slide">
+									<img src="img/catalog/1.jpg" alt="">
+								</div>
+							</div>
+							<a href="#" class="catalog__btn" data-modal="order"><span>Диваны</span></a>
+						</div>
+						<div class="catalog__item">
+							<div class="catalog__slider">
+								<div class="catalog__slide">
+									<img src="img/catalog/2.jpg" alt="">
+								</div>
+								<div class="catalog__slide">
+									<img src="img/catalog/2.jpg" alt="">
+								</div>
+							</div>
+							<a href="#" class="catalog__btn" data-modal="order"><span>Стулья</span></a>
+						</div>
+						<div class="catalog__item">
+							<div class="catalog__slider">
+								<div class="catalog__slide">
+									<img src="img/catalog/3.jpg" alt="">
+								</div>
+								<div class="catalog__slide">
+									<img src="img/catalog/3.jpg" alt="">
+								</div>
+							</div>
+							<a href="#" class="catalog__btn" data-modal="order"><span>Стеллажи</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section advantages" id="advantages">
+			<div class="section__bg advantages__bg">
+				<img src="img/leaves.png" alt="">
+				<img src="img/gray-circle.svg" alt="">
+				<img src="img/bush.png" alt="">
+			</div>
+			<div class="wrapper">
+				<div class="section__inner">
+					<div class="section__caption">Наши преимущества</div>
+					<div class="section__header">
+						<div class="section__head">
+							<h2 class="section__title">Наши <em>преимущества</em></h2>
+							<p>Более 200 довольных клиентов уже оценили качество и уникальность</p>
+						</div>
+					</div>
+					<div class="section__content">
+						<div class="advantages__inner">
+							<div class="advantages__pic">
+								<div class="advantages__slider">
+									<div class="advantages__slide">
+										<img src="img/table2.jpg" alt="">
+									</div>
+									<div class="advantages__slide">
+										<img src="img/table2.jpg" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="advantages__text">
+								<div class="advantages__item">
+									<img src="img/advantages/0.png" alt="" class="advantages__icon">
+									<h3 class="advantages__title">Отборная древесина</h3>
+									<p>Благодаря тщательному отбору для своих изделий используем качественную и экологичную древесину ценных пород. Несмотря на термообработку, она сохраняет всю необычную структуру и природные неровности. Каждое изделие получается уникальным, со своим особым духом и антуражем.</p>
+								</div>
+								<div class="advantages__item">
+									<img src="img/advantages/1.png" alt="" class="advantages__icon">
+									<h3 class="advantages__title">Ручная работа</h3>
+									<p>Природа создает шедевры с многовековой историей, которым мы придаем смыслы, превращаем в удобную мебель и предметы интерьера любого размера, обрабатывая и изготавливая изделия исключительно вручную.</p>
+								</div>
+								<div class="advantages__item">
+									<img src="img/advantages/2.png" alt="" class="advantages__icon">
+									<h3 class="advantages__title">Индивидуальный дизайн</h3>
+									<p>Природная уникальность каждого слэба не оставляет шансов изготовить два совершенно идентичных изделия. Наши мастера и дизайнеры преображают каждый слэб в настоящее произведение искусства с неповторимым и оригинальным дизайном, который придает любому интерьеру нужную Лофт-атмосферу.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section schema" id="about">
+			<div class="wrapper">
+				<div class="section__inner">
+					<div class="section__caption">схема работы</div>
+					<div class="section__header">
+						<div class="section__head">
+							<h2 class="section__title">Как мы работаем</h2>
+							<p>4 шага и мы приступаем к работе над вашей мебелью</p>
+						</div>
+					</div>
+					<div class="section__content schema__inner">
+						<div class="schema__item">
+							<div class="schema__pic">
+								<svg class="schema__circle" viewBox="0 0 154 154" preserveAspectRatio="xMidYMid meet">
+									<circle cx="77" cy="77" r="74" />
+									<circle cx="77" cy="77" r="74" stroke-dasharray="116,464" />
+								</svg>
+								<img src="img/doc.svg" alt="" />
+							</div>
+							<h3 class="schema__subtitle"><a href="#" data-modal="order">Заявка на сайте</a></h3>
+							<p>или по телефону <a href="tel:+37529229977">+375 (29) 922-99-77</a></p>
+						</div>
+						<div class="schema__item">
+							<div class="schema__pic">
+								<svg class="schema__circle" viewBox="0 0 154 154" preserveAspectRatio="xMidYMid meet">
+									<circle cx="77" cy="77" r="74" />
+									<circle cx="77" cy="77" r="74" stroke-dasharray="232,464" />
+								</svg>
+								<img src="img/screen.svg" alt="" />
+							</div>
+							<h3 class="schema__subtitle"><a href="#" data-modal="consult">Консультация</a></h3>
+							<p>Вместе с менеджером и технологом Вы обсуждаете все детали заказа.</a></p>
+						</div>
+						<div class="schema__item">
+							<div class="schema__pic">
+								<svg class="schema__circle" viewBox="0 0 154 154" preserveAspectRatio="xMidYMid meet">
+									<circle cx="77" cy="77" r="74" />
+									<circle cx="77" cy="77" r="74" stroke-dasharray="348,464" />
+								</svg>
+								<img src="img/gear.svg" alt="" />
+							</div>
+							<h3 class="schema__subtitle">Замеры</h3>
+							<p>В случае необходимости замерщик выезжает к Вам для проведения измерений и заключает договор.</p>
+						</div>
+						<div class="schema__item">
+							<div class="schema__pic">
+								<svg class="schema__circle" viewBox="0 0 154 154" preserveAspectRatio="xMidYMid meet">
+									<circle cx="77" cy="77" r="74" />
+									<circle cx="77" cy="77" r="74" stroke-dasharray="464,464" />
+								</svg>
+								<img src="img/way.svg" alt="" />
+							</div>
+							<h3 class="schema__subtitle">Изготовление</h3>
+							<p>Мы приступаем к изготовлению заказа и отправляем его Вам транспортной компанией.</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="feedback">
+			<div class="wrapper">
+				<div class="feedback__inner">
+					<div class="feedback__head">
+						<h2 class="feedback__title">Воплотим идею в жизнь!</h2>
+						<p>Заполните форму ниже и получите бесплатную консультацию специалиста</p>
+					</div>
+					<div class="feedback__body">
+						<form action="" class="feedback__form">
+							<label class="field feedback__field">							
+								<input type="text" name="furniture" class="field__input" value="Ва" />
+								<span class="field__placeholder">Тип мебели</span>
+							</label>
+							<label class="field feedback__field">							
+								<input type="tel" name="phone" class="field__input" />
+								<span class="field__placeholder">Ваш телефон</span>
+							</label>
+							<button class="btn feedback__btn">Оставить заявку</button>
+						</form>
+						<div class="feedback__notation">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section portfolio" id="portfolio">
+			<div class="wrapper">
+				<div class="section__inner">
+					<div class="section__caption">портфолио</div>
+					<div class="section__header">
+						<div class="section__head">
+							<h2 class="section__title">Наши <em>работы</em></h2>
+							<p>Проекты, воплощенные с любовью</p>
+						</div>
+						<div class="section__tools">
+							<a href="https://www.instagram.com/townloft_by/" class="social-link" target="_blank">
+								<span class="social-link__pic">
+									<img src="img/instagram.svg" alt="" />
+								</span>
+								<span class="social-link__text">
+									<span class="social-link__title">@townloft_by</span>
+									<span>Следите за нами в инстаграм. Будьте в курсе событий!</span>
+								</span>
+							</a>
+							<a href="https://www.instagram.com/townloft_by/" class="btn" target="_blank">Подписаться</a>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<div class="portfolio__inner">
+				<div class="portfolio__content">
+					<a href="img/portfolio/0.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/0.jpg" alt="">
+					</a>
+					<a href="img/portfolio/1.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/1.jpg" alt="">
+					</a>
+					<a href="img/portfolio/2.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/2.jpg" alt="">
+					</a>
+					<a href="img/portfolio/3.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/3.jpg" alt="">
+					</a>
+					<a href="img/portfolio/4.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/4.jpg" alt="">
+					</a>
+					<a href="img/portfolio/5.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/5.jpg" alt="">
+					</a>
+					<a href="img/portfolio/6.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/6.jpg" alt="">
+					</a>
+					<a href="img/portfolio/7.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/7.jpg" alt="">
+					</a>
+					<a href="img/portfolio/0.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/0.jpg" alt="">
+					</a>
+					<a href="img/portfolio/1.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/1.jpg" alt="">
+					</a>
+					<a href="img/portfolio/2.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/2.jpg" alt="">
+					</a>
+					<a href="img/portfolio/3.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/3.jpg" alt="">
+					</a>
+					<a href="img/portfolio/4.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/4.jpg" alt="">
+					</a>
+					<a href="img/portfolio/5.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/5.jpg" alt="">
+					</a>
+					<a href="img/portfolio/6.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/6.jpg" alt="">
+					</a>
+					<a href="img/portfolio/7.jpg" data-fancybox="gallery" class="portfolio__item" target="_blank">
+						<img src="img/portfolio/min/7.jpg" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="section__inner">
+					<div class="portfolio__nav">
+						<span class="slick-arrow prev fa-angle-left portfolio__arrow"></span>
+						<span class="slick-arrow next fa-angle-right portfolio__arrow"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section calc" id="calc">
+			<div class="wrapper">
+				<div class="calc__inner">
+					<div class="section__caption">калькулятор</div>
+					<div class="calc__body">
+						<img src="img/calc.png" alt="" class="calc__icon">
+						<div class="calc__header">
+							<h2 class="calc__title">Калькулятор <em>предварительной стоимости</em></h2>
+							<p>Узнайте примерную стоимость изготовления мебели в нашей компании в зависимости от ваших предпочтений</p>
+						</div>
+						<form action="" class="calc__form">
+							<div class="multifield">
+								<div class="select" tabindex="0">
+									<select name="furniture" class="select__input" tabindex="-1" required>
+										<option value="" selected disabled>Тип мебели</option>
+										<option>Стол</option>
+										<option>Стул</option>
+										<option>Стеллаж</option>
+										<option>Диван</option>
+									</select>
+									<div class="select__output"></div>
+									<div class="select__placeholder">Тип мебели</div>
+									<ul class="select__list">
+										<li>Стол</li>
+										<li>Стул</li>
+										<li>Стеллаж</li>
+										<li>Диван</li>
+									</ul>
+								</div>
+								<div class="select" tabindex="0">
+									<select name="material" class="select__input" tabindex="-1" required >
+										<option value="" selected disabled>Материал</option>
+										<option>Дуб</option>
+										<option>Сосна</option>
+										<option>Баобаб</option>
+									</select>
+									<div class="select__output"></div>
+									<div class="select__placeholder">Материал</div>
+									<ul class="select__list">
+										<li>Дуб</li>
+										<li>Сосна</li>
+										<li>Баобаб</li>
+									</ul>
+								</div>
+								<label class="field">							
+									<input type="text" name="size" class="field__input" />
+									<span class="field__placeholder">Размеры (см)</span>
+								</label>
+							</div>
+							<label class="field">
+								<textarea name="comment" rows="4" class="field__input"></textarea>
+								<span class="field__placeholder">Комментарий</span>
+							</label>
+							<h3 class="calc__subtitle">Заполнили? Подайте заявку</h3>
+							<div class="multifield">
+								<label class="field">							
+									<input type="text" name="username" class="field__input" />
+									<span class="field__placeholder">Имя</span>
+								</label>
+								<label class="field">							
+									<input type="tel" name="phone" class="field__input" />
+									<span class="field__placeholder">Телефон</span>
+								</label>
+								<label class="field">							
+									<input type="email" name="email" class="field__input" />
+									<span class="field__placeholder">E-mail</span>
+								</label>
+							</div>
+							<button class="btn calc__btn">Рассчитать</button>
+						</form>
+						<div class="calc__notation">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section contacts" id="contacts">
+			<div class="wrapper">
+				<div class="section__inner">
+					<div class="section__caption">контакты</div>
+					<div class="section__header">
+						<div class="section__head">
+							<h2 class="section__title">Наши <em>магазины</em></h2>
+							<p>контакты</p>
+						</div>
+						<div class="section__tools">
+							<div class="contacts__nav">
+								<a href="#" class="btn btn--low contacts__link">Магазин 1</a>
+								<a href="#" class="btn btn--low btn--thin contacts__link">Магазин 2</a>
+							</div>
+						</div>
+					</div>
+					<div class="section__content contacts__body">
+						<div class="contacts__tab">
+							<div class="contacts__row">
+								<div class="contact">
+									<h4 class="contact__title"><i class="icon-map-marker"></i> Адрес</h4>
+									<p>Минск, ТЦ Трюм, ул. Кальварийская 7б</p>
+								</div>
+								<div class="contact">
+									<h4 class="contact__title"><i class="icon-envelope"></i> Е-mail</h4>
+									<p><a href="mailto:shop@baltkub.by">shop@baltkub.by</a></p>
+								</div>
+								<div class="contact">
+									<h4 class="contact__title"><i class="icon-clock"></i> Время работы</h4>
+									<p>10:00 - 21:00 <br>Ежедневно</p>
+								</div>
+								<div class="contact contact--long">
+									<button class="btn contact__btn" data-modal="consult">Обратный звонок</button>
+									<h4 class="contact__title"><i class="icon-phone"></i> Телефон</h4>
+									<p><a href="tel:+375299229977">+375 (29) 922-99-77</a></p>									
+								</div>
+							</div>
+							<div class="contacts__inner">
+								<div class="contacts__slider">
+									<div class="contacts__slide"><img src="img/shop.jpg" alt=""></div>
+									<div class="contacts__slide"><img src="img/shop.jpg" alt=""></div>
+								</div>
+								<div class="contacts__map" id="map1" data-address="Минск МФК Ленинград, ул. Ленина 27 "></div>
+							</div>
+						</div>
+						<div class="contacts__tab">
+							<div class="contacts__row">
+								<div class="contact">
+									<h4 class="contact__title"><i class="icon-map-marker"></i> Адрес</h4>
+									<p>Минск, ТЦ Трюм, ул. Кальварийская 7б</p>
+								</div>
+								<div class="contact">
+									<h4 class="contact__title"><i class="icon-envelope"></i> Е-mail</h4>
+									<p><a href="mailto:shop@baltkub.by">shop@baltkub.by</a></p>
+								</div>
+								<div class="contact">
+									<h4 class="contact__title"><i class="icon-clock"></i> Время работы</h4>
+									<p>10:00 - 21:00 <br>Ежедневно</p>
+								</div>
+								<div class="contact contact--long">
+									<button class="btn contact__btn" data-modal="consult">Обратный звонок</button>
+									<h4 class="contact__title"><i class="icon-phone"></i> Телефон</h4>
+									<p><a href="tel:+375299229977">+375 (29) 922-99-77</a></p>									
+								</div>
+							</div>
+							<div class="contacts__inner">
+								<div class="contacts__slider">
+									<div class="contacts__slide"><img src="img/shop.jpg" alt=""></div>
+									<div class="contacts__slide"><img src="img/shop.jpg" alt=""></div>
+								</div>
+								<div class="contacts__map" id="map2"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="wrapper footer__wrapper">
+			<div class="footer__social">
+				<a href="//instagram.com/townloft_by" class="fa-instagram" target="_blank"></a>
+				<a href="//facebook.com/pages/category/Furniture-Store/TownLoft-324806978364177" class="fa-facebook" target="_blank"></a>
+				<a href="//vk.com" class="fa-vk" target="_blank"></a>
+			</div>
+			<div class="footer__text">© 2019 «Townloft». <a href="policy.pdf" target="_blank">Политика конфиденциальности</a></div>
+			<div class="footer__dev">
+				Разработка сайта <a href="//seoteam.by" target="_blank"><img src="img/seoteam-logo.svg" alt=""></a>
+			</div>
+		</div>
+	</footer>
+	<div class="modal" id="order">
+		<span class="modal__close icon-close"></span>
+		<div class="modal__head">
+			<h3 class="modal__title">Сделать заказ</h3>
+			<p>и мы перезвоним через 15 минут</p>			
+		</div>
+		<form action="" class="modal__form">
+			<label class="field">							
+				<input type="text" name="username" class="field__input" required />
+				<span class="field__placeholder">Имя</span>
+			</label>
+			<label class="field">							
+				<input type="tel" name="phone" class="field__input" required />
+				<span class="field__placeholder">Телефон</span>
+			</label>
+			<button class="btn btn--block modal__btn">Отправить заявку</button>
+			<label class="label">
+				<input type="checkbox" name="policy" checked required>
+				<span>Я согласен с <a href="policy.pdf" target="_blank">политикой конфиденциальности</a></span>
+			</label>
+		</form>
+	</div>
+	<div class="modal" id="consult">
+		<span class="modal__close icon-close"></span>
+		<div class="modal__head">
+			<h3 class="modal__title">Получить консультацию</h3>
+			<p>и мы перезвоним через 15 минут</p>			
+		</div>
+		<form action="" class="modal__form">
+			<label class="field">							
+				<input type="text" name="username" class="field__input" required />
+				<span class="field__placeholder">Имя</span>
+			</label>
+			<label class="field">							
+				<input type="tel" name="phone" class="field__input" required />
+				<span class="field__placeholder">Телефон</span>
+			</label>
+			<button class="btn btn--block modal__btn">Отправить заявку</button>
+			<label class="label">
+				<input type="checkbox" name="policy" checked required>
+				<span>Я согласен с <a href="policy.pdf" target="_blank">политикой конфиденциальности</a></span>
+			</label>
+		</form>
+	</div>
+	<div class="modal modal--clear" id="message">
+		<span class="modal__close icon-close"></span>
+		<div class="modal__pic">
+			<img src="img/shield.svg" alt="" />
+		</div>
+		<div class="modal__head">
+			<h3 class="modal__title">Успешно отправлено!</h3>
+			<p>Ваша заявка отправлена и принята в обработку нашим менеджером</p>			
+		</div>
+		<button class="btn btn--block modal__btn" onclick="closeModal()">Вернуться на сайт</button>
+	</div>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer></script>
+	<script src="libs/jquery/jquery-3.4.1.min.js" defer></script>
+	<script src="libs/slick/slick.min.js" defer></script>
+	<script src="libs/fancybox/jquery.fancybox.min.js" defer></script>
+	<script src="js/script.js" defer></script>	
+</body>
+</html>

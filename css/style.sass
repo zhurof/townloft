@@ -42,6 +42,8 @@ body
 	min-height: 100vh
 	font: normal normal 14px/normal "Proxima Nova",sans-serif
 	color: $black
+	position: relative
+	min-width: 320px
 
 header,footer
 	flex: 0 0 auto
@@ -53,6 +55,9 @@ img,
 iframe,
 video
 	max-width: 100%
+	
+a
+	color: $green
 
 a img
 	/*для IE10*/
@@ -62,6 +67,10 @@ p
 	margin: 0 0 1em
 	&:last-child
 		margin: 0
+		
+em
+	font-style: inherit
+	color: $green
 
 *:focus
 	outline: none
@@ -99,6 +108,171 @@ textarea
 		appearance: none
 		margin: 0
 		
+[type=checkbox]
+	display: inline-block
+	appearance: none
+	margin: 0 5px 0 0
+	vertical-align: middle
+	width: 15px
+	height: 15px
+	border-radius: 50%
+	border: 4px solid $green
+	background-color: $green
+	background-clip: content-box
+	flex: 0 0 auto
+	box-shadow: 0 0 10px transparentize($green,.4)
+	&:checked
+		background-color: #fff
+	&:focus
+		box-shadow: 0 0 10px 4px transparentize($green,.4)
+	&::-ms-check
+		display: none
+
+.field
+	display: block
+	position: relative
+	text-align: left
+	margin: 0 0 20px
+	&__input
+		display: block
+		width: 100%
+		background-color: #fff
+		border: none
+		border-bottom: 2px solid #ccc
+		padding: 26px 20px 15px
+		text-align: inherit
+		transition: all .2s ease
+		&--gray
+			background-color: $gray
+		&:focus
+			box-shadow: 0 0 6px transparentize($green,.7)
+			border-color: $green
+	&__placeholder
+		display: block
+		position: absolute
+		left: 0
+		top: 23px
+		line-height: 1
+		padding: 0 20px
+		white-space: nowrap
+		width: 100%
+		overflow: hidden
+		text-overflow: ellipsis
+		transition: all .15s ease
+		color: #666
+		user-select: none
+	&__input--filled + &__placeholder,
+	&__input:focus + &__placeholder
+		font-size: 12px
+		color: rgba(0,0,0,.5)
+		top: 1em
+		
+.select
+	display: block
+	position: relative
+	text-align: left
+	margin: 0 0 20px
+	&:after
+		content: '\f078'
+		display: inline-block
+		font: normal normal 12px/1 fontAwesome
+		position: absolute
+		top: calc(50% - .5em)
+		right: 18px
+		pointer-events: none
+		color: #666
+		z-index: 2
+		transition: transform .2s ease
+	&:focus
+		&:after
+			color: $green
+	&--open
+		&:after
+			transform: rotate(180deg)
+	&__input
+		position: absolute
+		z-index: -1
+		opacity: 0
+		pointer-events: none
+	&__output
+		background-color: #fff
+		border-bottom: 2px solid #ccc
+		padding: 26px 35px 15px 20px
+		text-align: inherit
+		transition: all .2s ease
+		white-space: nowrap
+		max-width: 100%
+		overflow: hidden
+		text-overflow: ellipsis
+		position: relative
+		z-index: 2			
+		&:after
+			content: '\00A0'
+	&:focus &__output
+		box-shadow: 0 0 6px transparentize($green,.7)
+		border-color: $green
+	&--filled &__output
+		&:after
+			display: none
+	&__placeholder
+		display: block
+		position: absolute
+		left: 0
+		top: 23px
+		line-height: 1
+		padding: 0 35px 0 20px
+		white-space: nowrap
+		width: 100%
+		overflow: hidden
+		text-overflow: ellipsis
+		transition: all .15s ease
+		color: #666
+		pointer-events: none
+		z-index: 2
+		user-select: none
+	&--filled &__placeholder
+		font-size: 12px
+		color: rgba(0,0,0,.5)
+		top: 1em
+	&__list
+		+unlist
+		display: none
+		position: absolute
+		top: 100%
+		left: 0
+		width: 100%
+		background-color: #fff
+		user-select: none
+		z-index: 2
+		box-shadow: 0 0 6px transparentize($green,.7)
+		>li
+			padding: 16.5px 20px
+			cursor: pointer
+	&--open &__list
+		display: block
+		
+.label
+	display: flex
+	align-items: center
+	user-select: none
+	text-align: left
+	span
+		display: block
+		width: 100%
+		flex: 1 1 auto
+	a
+		display: inline-block
+		
+.multifield
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	justify-content: space-between
+	.field,.select
+		width: calc((100% - 46px) / 3)
+		
+	
+		
 /*кнопки*/
 button,
 [type=submit],
@@ -110,9 +284,9 @@ button,
 	vertical-align: top
 	appearance: none
 	min-width: 190px
-	padding: 0 25px
+	padding: 0 24px
 	text-align: center
-	font: normal bold 16px/57px 'Proxima Nova',sans-serif
+	font: normal bold 16px/58px 'Proxima Nova',sans-serif
 	text-shadow: none
 	background-color: $green
 	color: #fff
@@ -122,17 +296,26 @@ button,
 	white-space: nowrap
 	overflow: hidden
 	text-overflow: ellipsis
-	border: none
+	border: 1px solid $green
 	text-decoration: none
-	&_block
+	user-select: none
+	&--block
 		padding: 0 10px
 		display: block
 		width: 100%
+	&--low
+		line-height: 55px
+	&--thin
+		background: none
+		border-color: #82ca9c
+		color: #000
+		font-weight: 400
+	
 
 /*заголовки*/
 h1,h2,h3,h4,h5,h6
 	margin: 0 0 1em
-	font-family: "PT Serif",sans-serif
+	font-family: "PT Serif", times
 	font-weight: bold
 	line-height: normal
 h1
@@ -141,6 +324,7 @@ h2
 	font-size: 28px
 h3
 	font-size: 20px
+	margin: 0 0 .5em
 h4
 	font-size: 16px
 
@@ -154,7 +338,66 @@ ul,ol
 	max-width: 1280px
 	margin: 0 auto
 	padding: 0 20px
-
+//Модальные окна
+.modal-wrapper
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 100
+	background-color: rgba(0, 0, 0, 0.81)
+	padding: 20px 10px
+	overflow: auto
+	display: flex
+	flex-direction: column
+	.modal
+		display: block
+.modal
+	display: none
+	background: url(../img/green-circle.svg) no-repeat  -88px -143px,#fff
+	width: 100%
+	max-width: 400px
+	position: relative
+	margin: auto
+	flex: 0 0 auto
+	padding: 47px 40px 40px
+	text-align: center
+	&--clear
+		background-image: none
+	&__close
+		display: inline-block
+		position: absolute
+		font-size: 16px
+		line-height: 1
+		padding: 20px
+		top: 0
+		right: 0
+		cursor: pointer
+		color: #ccc
+	&__title
+		font-size: 24px
+		margin: 0 0 .2em
+	&__head
+		margin: 0 0 2.5em
+	&__pic
+		width: 160px
+		height: 160px
+		margin: 14px auto 34px
+		border-radius: 50%
+		border: 2px dotted $green
+		position: relative
+		img
+			width: 90px
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			filter: drop-shadow(0 0 5px $green)
+	&__btn
+		margin: 41px 0 19px
+		&:last-child
+			margin-bottom: 0
 /*ШАПКА*/
 .header
 	padding: 18px 0
@@ -166,22 +409,706 @@ ul,ol
 		width: 152px
 		flex: 0 0 auto
 		margin: 0 10px 0 0
+		cursor: pointer
+		user-select: none
 	&__menu
 		+unlist
-		margin: 0 auto
+		margin: 9px auto 0
+		text-transform: uppercase
 		>li
 			display: inline-block
 			>a
 				display: block
+				color: inherit
+				padding: 10px 8.6px
+				text-decoration: none
+	&__chat
+		margin: 0 0 0 27px
+	&__phone
+		margin: 0 -2px 0 10px
+.circle-link
+	display: inline-block
+	width: 60px
+	margin: 0 10px 20px
+	color: inherit
+	text-decoration: none
+	font-size: 12px
+	&__icon
+		display: block
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		line-height: 60px
+		text-align: center
+		background-color: $gray
+		margin: 0 auto 18px
+		font-size: 23px
+	.fa-paper-plane
+		color: #0088cc
+		text-indent: -0.2em
+	.fa-whatsapp
+		color: #7ad06d
+	.icon-viber
+		color: #9069ae
+		
 .chat-block
+	position: relative
+	&__trigger
+		font: normal normal 27px/normal 'icomoon'
+		padding: 8px 9px 0
+		cursor: pointer
+		transition: all .2s ease
+		&:before
+			content: '\e902'
+		&.active
+			color: $green
+			text-shadow: 0 2px 5px $green
+			&:before
+				content: '\e901'
 	&__body
 		display: none
+		position: absolute
+		top: calc(100% + 22px)
+		left: -12px
+		background-color: #fff
+		border-top: 2px solid $green
+		width: 302px
+		padding: 38px 40px 40px
+		text-align: center
+	&.open &__body
+		display: block
+	&__subtitle
+		font: inherit
+		margin: 0 0 1.2em
+	&__links
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		margin: 0 -10px 14px
 .phone-block
 	position: relative
+	&__head
+		font-size: 20px
+		font-weight: bold
+		color: inherit
+		user-select: none
+		padding: 8px 0 0
+		cursor: pointer
+		transition: all .2s ease
+		&:before
+			content: '\e907'
+			font: normal normal 22px/1 icomoon
+			display: inline-block
+			margin: 0 10px 0 0
+			vertical-align: middle
+		&:after
+			content: '\f107'
+			font-family: fontAwesome
+			font-size: 20px
+			display: inline-block
+			margin: 0 0 0 7px
+			transition: transform .2s ease
+		&.active
+			color: $green
+			&:before
+				text-shadow: 0 2px 5px $green
+			&:after
+				transform: rotate(180deg)
 	&__body
 		display: none
+		position: absolute
+		top: calc(100% + 23px)
+		right: -5px
+		width: 302px
+		background-color: #fff
+		border-top: 2px solid $green
+		padding: 41px 40px 35px
+	&.open &__body
+		display: block
+	&__item
+		margin: 0 0 33px
+		&:last-child
+			margin: 0
+	&__subtitle
+		font: inherit
+		text-transform: uppercase
+		margin: 0 0 .8em
+	&__phone
+		display: block
+		width: max-content
+		max-width: 100%
+		font-size: 20px
+		font-weight: bold
+		color: $green
+		text-decoration: none
+		margin: 0 0 .7em
+	&__address
+		position: relative
+		padding: 0 0 0 17px
+		&:before
+			content: '\e906'
+			font: normal normal 12px/1 icomoon
+			display: inline-block
+			position: absolute
+			color: #7f7f7f
+			top: 0
+			left: 0
+.menu-btn
+	display: none
+	
 /*ОСНОВНОЕ СОДЕРЖИМОЕ*/
+.slick
+	&-arrow
+		display: inline-block
+		width: 30px
+		height: 30px
+		line-height: 30px
+		text-align: center
+		background-color: #fff
+		color: #666
+		position: absolute
+		top: calc(50% - 15px)
+		z-index: 2
+		border-radius: 50%
+		font-size: 19px
+		cursor: pointer
+		&.prev
+			left: 20px
+			text-indent: -2px
+		&.next
+			right: 20px
+			text-indent: 2px
+.top-block
+	padding: 0 0 90px
+	background: url(../img/filings.png) no-repeat calc(50% - 602px) bottom
+	&__wrapper
+		padding-right: 0
+		display: flex
+	&__text
+		width: 527px
+		padding: 122px 30px 0 105px
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		font-size: 18px
+		p
+			margin: 0 0 .4em
+			&:last-child
+				margin: 0
+	&__title
+		width: calc(100% + 166px)
+		line-height: 1.2
+		position: relative
+		z-index: 1
+		margin: 0 0 1.7em
+		span
+			background: repeating-linear-gradient(to bottom,white 0,white .9em,transparent .9em,transparent 1.2em)
+			background-position-y: .3em
+	&__social
+		margin: auto 0 0
+		font-size: 14px
+		a
+			display: inline-block
+			vertical-align: middle
+			color: inherit
+			text-decoration: none
+			margin: 0 16px 0 0
+		.fa-vk
+			font-size: 20/14*1em
+	&__pic
+		width: calc(100% - 527px)
+		background: url(../img/table.jpg) no-repeat center/cover
+		min-height: 500px
+		padding: 20px 21px
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: flex-end		
+.address-block
+	background-color: #fff
+	width: 242px
+	max-width: 100%
+	padding: 20px
+	color: #0a0e17
+	&__title
+		font-family: inherit
+		font-size: inherit
+		color: #666
+		text-transform: uppercase
+		&:before
+			content: '\e906'
+			font-family: icomoon
+			font-size: calc(100% - 2px)
+			margin: 0 8px 0 0
+	strong
+		display: block
+.section
+	padding: 21px 0
+	position: relative
+	&__bg
+		+pos
+		z-index: -1
+		overflow: hidden
+		img
+			position: absolute
+	&__inner
+		padding-left: 105px
+		position: relative
+	&__caption		
+		font: normal bold 12px/normal 'PT Serif', times
+		color: #666
+		text-transform: uppercase
+		position: absolute
+		top: 102px
+		left: -3px
+		transform-origin: right top
+		transform: translateX(-100%) rotate(-90deg)
+		user-select: none
+		&:after
+			content: ''
+			display: inline-block
+			width: 40px
+			border-bottom: 1px solid
+			vertical-align: middle
+			margin-left: 20px
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		margin: 0 0 21px
+	&__head
+		font-size: 16px
+	&__title
+		margin: 0 0 .2em
+	&__tools
+		flex: 0 0 auto
+		margin: 6px 0 0 30px
+.catalog
+	overflow: hidden
+	&__inner
+		margin: 0 -10px 30px
+		display: flex
+		flex-wrap: wrap
+	&__item
+		position: relative
+		width: calc(50% - 20px)
+		margin: 0 10px 20px		
+	&__slide
+		&:not(.slick-slide):nth-child(n+2)
+			display: none
+		img
+			display: block
+			width: 100%
+			height: 373px
+			+obj
+	&__btn
+		font: normal normal 20px/3 "PT Serif",times
+		display: inline-block
+		background-color: $black
+		color: #fff
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellispsis
+		text-decoration: none
+		padding: 0 10px 0 20px
+		min-width: 140px
+		position: absolute
+		z-index: 2
+		bottom: 22px
+		left: 0
+		&:after
+			content: '\f105'
+			font-family: fontAwesome
+			margin: 0 0 0 11px	
+@supports(display: grid)
+	.catalog
+		&__inner
+			display: grid
+			grid-template-columns: 400px 295px 400px
+			grid-template-rows: 260px 300px
+			grid-gap: 20px
+			padding: 20px 0 50px
+			margin: 0
+		&__slide
+			img
+				height: 300px
+		&__item
+			margin: 0
+			width: auto
+			align-self: center
+			&:nth-child(4n-3)
+				align-self: stretch
+				grid-row: span 2				
+				img
+					height: 580px
+			&:nth-child(4n-2)
+				grid-column: span 2
+				align-self: flex-end
+				img
+					height: 260px
+			
+.advantages
+	&__bg
+		top: -22px
+		height: calc(100% + 273px)
+		img
+			&:first-child
+				top: 0
+				left: calc(50% + 242px)
+			&:nth-child(2)
+				top: 314px
+				left: calc(50% - 619px)
+			&:nth-child(3)
+				bottom: 0
+				left: calc(50% + 495px)
+	&__inner
+		display: flex
+		align-items: flex-start
+		padding: 17px 0 62px
+	&__pic
+		width: 401px
+	&__slider
+		margin: 0 0 50px
+	&__slide
+		&:not(.slick-slide):nth-child(n+2)
+			display: none
+		img
+			display: block
+			width: 100%
+	&__arrow
+		top: calc(100% + 19px)
+		background-color: $gray
+		&.prev
+			left: auto
+			right: 49px
+		&.next
+			right: 0
+	&__text
+		width: calc(100% - 401px)
+		padding: 15px 0 0 125px
+	&__item
+		position: relative
+		margin: 0 0 31px
+		max-width: 508px
+	&__icon
+		position: absolute
+		top: -8px
+		right: calc(100% + 7px)
+.schema
+	&__inner
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -15px
+		justify-content: space-between
+		padding: 16px 0 16px
+	&__item
+		width: 190px
+		margin: 0 15px 30px
+		text-align: center
+	&__pic
+		width: 154px
+		margin: 0 auto 35px
+		position: relative
+		user-select: none
+		img
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			max-height: 50%
+	&__circle
+		display: block
+		width: 100%
+		fill: none
+		circle
+			stroke: $green
+			stroke-width: 2px			
+			&:first-child
+				stroke-dasharray: 2px 3px
+			&:last-child
+				stroke-width: 6px
+				transform-origin: center
+				transform: rotate(-90deg)
+				filter: drop-shadow(0 0 5px $green)
+	&__subtitle
+		font-size: 18px
+		color: $green
+		margin: 0 0 .8em
+		a
+			color: inherit
+			text-decoration: none
+	[href^="tel:"]
+		display: inline-block
+		font-weight: bold
+		color: inherit
+		text-decoration: none
+		font-size: calc(1em + 2px)
+.feedback
+	padding: 11px 0 40px
+	&__inner
+		margin-left: 105px
+		padding: 73px 40px 37px
+		background: url(../img/clerk.png) no-repeat center top/cover
+		position: relative
+		&:before
+			content: ''
+			display: inline-block
+			width: 38px
+			height: 44px
+			background: url(../img/leaf.png) no-repeat center/contain
+			position: absolute
+			top: 103px
+			left: -16px
+	&__head
+		margin: 0 0 37px
+	&__title
+		font-size: 22px
+		margin: 0 0 .4em		
+	&__form
+		display: flex
+		align-items: flex-start
+	&__field
+		width: 255px
+		max-width: 100%
+		margin: 0 20px 17px 0
+	&__btn
+		width: 255px
+		margin: 0 0 17px
+	&__notation
+		color: rgba(0,0,0,.5)
+.social-link
+	display: inline-flex
+	margin: 0 15px 0 0
+	align-items: center
+	text-decoration: none
+	color: inherit
+	width: 272px
+	max-width: calc(100% - 20px)
+	text-align: left
+	&__pic
+		display: block
+		width: 60px
+		height: 60px
+		flex: 0 0 auto
+		border-radius: 50%
+		position: relative
+		background-color: $gray
+		user-select: none
+		margin: 0 19px 0 0
+		img
+			width: 24px
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+	&__text
+		display: block
+		width: calc(100% - 79px)
+		flex: 1 1 auto
+	&__title
+		display: block
+		font-size: 20/14*1em
+		font-weight: bold
+		margin: 0 0 .25em
+.portfolio
+	padding: 71px 0 20px
+	&__inner
+		padding: 10px 0 0 calc(50% - 515px)		
+	&__content
+		display: flex
+		flex-flow: column wrap
+		align-content: flex-start
+		max-height: 530px
+		max-width: 100%
+		overflow: hidden
+	&__item
+		display: block
+		color: #fff
+		text-decoration: none
+		background-color: #000
+		position: relative
+		width: 316px
+		height: 260px
+		font-size: 16px
+		&:before
+			content: '\e905'
+			font: normal normal 23px/50px icomoon
+			width: 50px
+			height: 50px
+			background-color: #fff
+			color: #000
+			text-align: center
+			position: absolute
+			top: 87px
+			left: calc(50% - 25px)
+			border-radius: 50%
+			z-index: 1
+			opacity: 0
+		&:after
+			content: 'Смотреть'
+			display: block
+			width: 100%
+			position: absolute
+			text-align: center
+			top: 153px
+			left: 0
+			width: 100%
+			padding: 0 10px
+			z-index: 1
+			opacity: 0
+		img
+			display: block
+			width: 100%
+			height: 100%
+			+obj
+	&__nav
+		display: flex
+		align-items: flex-start
+		margin: 20px 0 0
+	&__arrow
+		position: static
+		background-color: $gray
+		margin: 0 20px 0 0
+.calc
+	background: url(../img/studio.png) no-repeat center/cover
+	padding: 0
+	&__inner
+		position: relative
+		padding: 100px 0 60px
+	&__body
+		background-color: $gray
+		max-width: 653px
+		margin: 0 auto
+		padding: 33px 22px 35px
+		position: relative
+		box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1)
+		text-align: center
+	&__icon
+		width: 117px
+		position: absolute
+		right: -3px
+		top: -45px
+		transform: rotate(7deg)
+	&__header
+		text-align: left
+		color: #666
+		max-width: 471px
+		padding-left: 3px
+		margin: 0 0 37px
+	&__title
+		font-size: 22px
+		color: #000
+		margin: 0 0 .5em
+	&__form
+		margin: 0 0 19px
+		textarea
+			height: 103px
+	&__subtitle
+		font-size: 16px
+		margin: 2.15em 0 2.1em
+	&__notation
+		font-size: 12px
+		color: rgba(0,0,0,.8)
+.contact
+	width: 190px
+	flex: 0 0 auto
+	background-color: #fff
+	margin: 19px 10px 0px
+	padding: 21px 20px 15px
+	font-weight: bold
+	&--long
+		flex: 1 1 auto
+	&__title
+		font: inherit
+		font-weight: 400
+		color: rgba(0,0,0,.5)
+		text-transform: uppercase
+		margin: 0 0 1.3em
+		i
+			margin: 0 6px 0 0
+	&__btn
+		float: right
+	a
+		display: inline-block
+		color: inherit
+		text-decoration: none
+		&[href^="tel:"]
+			font-size: 20px		
+		
+.contacts
+	background: url(../img/tree.png) no-repeat left calc(50% - 644px) bottom -300px ,$gray
+	padding: 52px 0 40px
+	&__nav
+		width: 735px
+		max-width: 100%
+		text-align: left
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-start
+	&__link
+		margin: 5px 0 0 21px
+	&__tab
+		&:nth-child(n+2)
+			display: none
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -10px 16px
+	&__inner
+		display: flex
+	&__slider
+		width: 400px
+		flex: 0 0 auto
+		position: relative
+	&__slide
+		&:not(.slick-slide):nth-child(n+2)
+			display: none
+		img
+			display: block
+			width: 100%
+			height: 300px
+			+obj
+	&__map
+		width: calc(100% - 400px)
+		flex: 1 1 auto
+		height: 300px
+		background-color: gray	
+		
 /*ПОДВАЛ*/
-
+.footer
+	background-color: $black
+	padding: 21px 0 20px
+	color: rgba(255,255,255,.8)
+	font-size: 12px
+	&__wrapper
+		display: flex
+		align-items: baseline
+		flex-wrap: wrap
+	&__social
+		color: #fff
+		font-size: 14px
+		min-width: 167px
+		a
+			display: inline-block
+			line-height: 1.2
+			width: 1.2em
+			text-align: center
+			vertical-align: top
+			margin: 0 15px 0 0
+			color: inherit
+			text-decoration: none
+	&__text
+		margin: 0 auto
+		a
+			color: inherit
+	&__dev
+		a
+			display: inline-block
+			vertical-align: -3px
+			margin-left: 5px
+		img
+			display: block
+			width: 62px
 /*АДАПТИВ*/
 @import "adaptive"

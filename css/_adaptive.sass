@@ -1,12 +1,485 @@
-﻿@media(max-width:1199px)
+﻿@media(min-width: 992px)
+	.btn
+		transition: all .2s ease
+		&:hover,&:focus
+			box-shadow: 0 0 10px transparentize($green,.4)
+	.select
+		&__list
+			>li
+				transition: all .2s ease
+				&:hover
+					background-color: $green
+					color: #fff
+	.slick
+		&-arrow
+			transition: all .2s ease
+			&:hover
+				background-color: $green
+				color: #fff
+	.circle-link
+		&__icon
+			transition: all .3s ease
+		&:hover &__icon
+			background-color: $green
+			color: #fff
+			box-shadow: 0 0 10px $green
+		&:hover &__caption
+			text-decoration: underline
+	.header
+		&__menu
+			a
+				transition: all .2s ease
+				&:hover
+					color: $green
+	.top-block
+		&__social
+			a
+				transition: all .2s ease
+				&:hover
+					color: $green
+	.catalog
+		&__btn
+			transition: all .2s ease
+			&:hover
+				color: $green
+				span
+					text-decoration: underline
+		&__arrow
+			opacity: 0
+		&__item:hover &__arrow
+			opacity: 1
+	@supports(display: grid)
+		.catalog
+			&__item
+				transition: all .2s linear
+				&:hover
+					z-index: 1
+					transform: scale(1.095)
+					box-shadow: 0 0 20px rgba(0,0,0,.5)
+	.schema
+		&__subtitle
+			a
+				&:hover
+					text-decoration: underline
+	.portfolio
+		&__item
+			transition: all .3s ease
+			&:before,&:after
+				transition: inherit
+			img
+				transition: inherit
+			&:hover
+				img
+					opacity: .5
+				&:before,&:after
+					opacity: 1
+	.contact
+		a
+			transition: all .2s ease
+			&:hover
+				color: $green
+	.footer
+		a
+			transition: all .2s ease
+			&:hover
+				color: $green
+	.modal
+		&__close
+			transition: all .2s ease
+			&:hover
+				color: $green
+			
+@media(max-width:1279px)
 	.wrapper
 		max-width: 992px
+	.phone-block
+		&__head
+			font-size: 0
+			&:before
+				vertical-align: top
+	.chat-block
+		&__body
+			left: auto
+			right: 0
+	.top-block
+		&__text
+			width: 50%
+			padding: 100px 30px 0 0
+		&__pic
+			width: 50%
+	.section
+		&__caption
+			display: none
+		&__inner
+			padding-left: 0
+	@supports(display: grid)
+		.catalog
+			&__inner
+				grid-template-columns: 335px 242px 335px
+				grid-template-rows: 220px 250px
+			&__item
+				img
+					height: 250px
+				&:nth-child(4n-3)
+					img
+						height: 490px
+				&:nth-child(4n-2)
+					img
+						height: 220px
+	.feedback
+		&__inner
+			margin-left: 0
+	.portfolio
+		&__inner
+			padding-left: calc(50% - 476px)
+	.contact
+		width: calc(50% - 20px)
+	.contacts
+		&__nav
+			width: auto
+					
   
-//@media(max-width:991px)
+@media(max-width:991px)
+	body
+		padding-top: 60px
+	.select
+		&__input
+			z-index: 2
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			pointer-events: all
+			//opacity: 1
+		&__output
+			z-index: 0
+	.header
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		z-index: 3
+		background-color: #fff
+		padding: 6px 0 8px
+		box-shadow: 0 0 8px rgba(0,0,0,.12)
+		&__logo
+			width: 120px
+			position: relative
+			z-index: 1
+			margin-right: auto
+		&__phone
+			margin: 0 0 0 15px
+			position: static
+		&__chat
+			margin: 0 0 0 15px
+			position: static
+		&__menu
+			position: fixed
+			top: 60px
+			left: 0
+			width: 100%
+			height: calc(100% - 60px)
+			overflow: auto
+			background-color: rgba(255,255,255,.95)
+			margin: 0
+			font-weight: bold
+			text-align: center
+			display: flex
+			flex-direction: column
+			justify-content: center
+			padding: 0 20px 60px
+			color: #000
+			font-size: 20px
+			opacity: 0
+			pointer-events: none
+			transition: all .3s ease
+			&.open
+				opacity: 1
+				pointer-events: all
+			>li
+				display: block
+				>a
+					display: inline-block
+	.phone-block
+		&__head
+			padding: 0 10px
+			position: relative
+			&:before
+				margin: 0
+			&:after
+				display: none
+		&__body
+			top: 100%
+			right: 0
+			max-height: calc(100vh - 60px)
+			overflow: auto
+	.chat-block
+		&__trigger
+			padding: 0 10px
+			position: relative
+		&__body
+			top: 100%
+			right: 0
+			max-height: calc(100vh - 60px)
+			overflow: auto			
+	.menu-btn
+		display: inline-block
+		position: relative
+		font: normal normal 30px/1 fontAwesome
+		width: 1em
+		text-align: center
+		margin-left: 15px
+		&:before
+			content: '\f0c9'
+		&.active
+			&:before
+				content: '\f00d'
+				
+	.top-block
+		background: url(../img/table.jpg) no-repeat center/cover
+		color: #fff
+		text-align: center
+		padding: 0
+		&__wrapper
+			display: block
+			padding: 0
+		&__text
+			width: auto
+			padding: 0
+			display: block
+			padding: 60px 20px 35px
+			background-color: rgba(0,0,0,.2)
+		&__pic
+			display: none
+		&__title
+			width: auto
+			color: black
+		&__btn
+			margin: 0 auto 30px
+		&__social
+			font-size: 25px
+			a
+				margin: 0 14px
+			.fa-vk
+				font-size: inherit
+	.catalog
+		&__inner
+			display: flex
+			margin: 0 -10px
+			justify-content: center
+			padding: 20px 0 0
+		&__item
+			width: 340px
+			margin: 0 10px 20px
+			img
+				height: 250px
+			&:nth-child(4n-3)
+				img
+					height: 250px
+			&:nth-child(4n-2)
+				img
+					height: 250px
+		&__btn
+			bottom: 0
+			width: 100%
+			text-align: center
+			background-color: rgba(0,0,0,.7)
+			line-height: 2
+	.advantages
+		&__inner
+			padding: 20px 0
+			display: block
+		&__pic
+			display: none
+		&__text
+			width: auto
+			padding-left: 100px
+	.schema
+		&__inner
+			justify-content: center
+	.feedback
+		&__inner
+			background: $gray
+			padding: 20px
+	.portfolio
+		padding: 20px 0
+		&__inner
+			padding: 10px 0
+		&__content
+			flex-flow: row nowrap
+			max-height: 99999%
+			max-height: unset
+			overflow: auto
+		&__item
+			width: calc(25vw - 5px)
+			flex: 0 0 auto
+			height: auto
+		&__nav
+			display: none
+	.contact
+		width: calc(100% / 3 - 20px)
+	.contacts
+		&__slider
+			width: 50%
+		&__map
+			width: 50%
+			
+@media(max-width:767px)
+	h1
+		font-size: 28px
+	h2
+		font-size: 26px
+	.multifield
+		display: block
+		.select,.field
+			width: 100%
+	.label
+		align-items: flex-start
+		input
+			margin: 5px 15px 0 0
+	.section
+		&__header
+			display: block
+			text-align: center
+		&__head
+			margin: 0 0 20px
+			font-size: 14px
+		&__tools
+			margin: 0
+	.feedback
+		background-color: $gray
+		padding: 30px 0
+		text-align: center
+		&__inner
+			padding: 0
+			&:before
+				display: none
+		&__form
+			display: block
+			max-width: 420px
+			margin: 0 auto
+		&__field
+			width: 100%
+	.social-link
+		display: flex
+		margin: 0 auto 2em
+	.portfolio
+		&__item
+			width: calc(50vw - 20px)
+	.calc
+		&__icon
+			display: none
+		&__body
+			max-width: 420px
+			text-align: center
+	.contact
+		margin: 0 10px 10px
+		width: calc(100% - 20px)
+		&__btn
+			display: none
+	.contacts
+		&__nav
+			justify-content: center
+			width: auto
+		&__link
+			margin: 0 10px 10px
+		&__inner
+			display: block
+		&__slider
+			width: 100%
+		&__map
+			width: 100%
+	.footer
+		text-align: center
+		padding: 15px 0
+		&__wrapper
+			display: block
+		&__social
+			margin: 0 0 10px
+			font-size: 20px
+			min-width: 0
+		&__text
+			margin: 0 0 1em
 	
 
-//@media(max-width:767px)
-	
-
-//@media(max-width:480px)
-	
+@media(max-width:480px)
+	.wrapper
+		padding: 0 15px
+	h1
+		font-size: 24px
+	h2
+		font-size: 22px
+	.slick
+		&-arrow
+			&.prev
+				left: 5px
+			&.next
+				right: 5px
+	.modal
+		max-width: 100%
+		padding: 45px 20px
+		&__title
+			font-size: 20px
+		&__head
+			margin: 0 0 1em
+	.header
+		&__phone,&__chat
+			margin-left: 10px
+	.menu-btn
+		margin-left: 10px
+	.phone-block
+		&__body
+			width: 100%
+			box-shadow: 0 5px 10px rgba(0,0,0,.2)
+	.chat-block
+		&__body
+			width: 100%
+			right: 0
+			box-shadow: 0 5px 10px rgba(0,0,0,.2)
+	.top-block
+		text-shadow: 0 0 5px #000
+		&__wrapper
+			padding: 0
+		&__text
+			padding: 50px 15px 35px
+		&__title
+			color: inherit			
+			span
+				background: none
+			br
+				display: none
+	.catalog
+		&__item
+			width: calc(100% - 20px)
+	.advantages
+		&__text
+			padding: 0
+		&__title
+			text-align: center
+		&__icon
+			position: static
+			display: block
+			margin: 0 auto 10px
+	.portfolio
+		padding: 30px 0 0
+		&__inner
+			padding: 0
+		&__item
+			width: calc(90vw)
+	.calc
+		background: $gray
+		&__inner
+			padding: 35px 0
+		&__body
+			padding: 0
+			width: auto
+			background: none
+			box-shadow: none
+		&__header
+			text-align: center
+			padding: 0
+	.contacts
+		&__link
+			display: block
+			margin: 0 0 10px
+			width: 100%
